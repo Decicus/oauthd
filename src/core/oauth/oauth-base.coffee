@@ -43,7 +43,7 @@ module.exports = (env) ->
 				return "" if ! @_params[val] || ! @_parameters[val]
 				if Array.isArray(@_parameters[val])
 					return @_parameters[val].join(@_params[val].separator || ",")
-				if typeof @_params[val] === 'object' and val === 'scope'
+				if typeof @_params[val] is 'object' and val is 'scope'
 					return Object.keys(@_params[val].values).join(_this.params[val].separator || " ")
 				return @_parameters[val]
 			return param.replace /!BASE64(.*?)!BASE64/g, (match, val) ->
