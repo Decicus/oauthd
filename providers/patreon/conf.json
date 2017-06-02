@@ -1,0 +1,63 @@
+{
+    "name": "Patreon",
+    "desc": "Patreon is empowering a new generation of creators. Support and engage with artists and creators as they live out their passions!",
+    "url": "https://www.patreon.com/oauth2",
+    "oauth2": {
+        "authorize": {
+            "url": "/authorize",
+            "query": {
+                "client_id": "{client_id}",
+                "redirect_uri": "{{callback}}",
+                "response_type": "code",
+                "scope": "{scope}",
+                "state": "{{state}}"
+            }
+        },
+        "access_token": {
+            "url": "https://api.patreon.com/oauth2/token",
+            "format": "json",
+            "query": {
+                "client_id": "{client_id}",
+                "client_secret": "{client_secret}",
+                "code": "{{code}}",
+                "grant_type": "authorization_code",
+                "redirect_uri": "{{callback}}"
+            },
+            "extra": [
+                "refresh_token"
+            ]
+        },
+        "refresh": {
+            "url": "https://api.patreon.com/oauth2/token",
+            "format": "json",
+            "query": {
+                "client_id": "{client_id}",
+                "client_secret": "{client_secret}",
+                "grant_type": "refresh_token",
+                "refresh_token": "{{refresh_token}}"
+            }
+        },
+        "request": {
+            "headers": {
+                "Authorization": "Bearer {{token}}"
+            }
+        }
+    },
+    "parameters": {
+        "client_id": "string",
+        "client_secret": "string",
+        "scope": {
+            "values": {
+                "users": "User profile information",
+                "pledges-to-me": "Pledges to your creator",
+                "my-campaign": "Creator info"
+            }
+        }
+    },
+    "href": {
+        "keys": "https://www.patreon.com/platform/documentation/clients",
+        "docs": "https://www.patreon.com/platform/documentation/overview",
+        "apps": "https://www.patreon.com/settings/account",
+        "provider": "https://www.patreon.com/"
+    }
+}
