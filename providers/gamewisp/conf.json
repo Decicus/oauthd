@@ -51,7 +51,8 @@
                 "read_only": "Use this when you're building applications that you intend for GameWisp channels to use. Provides access to the Channel Resource. Provides read only access to basic channel information, a channel's subscribers, and their tiers and benefits. This is the default scope. If no scope is passed to the endpoint, this scope is assumed.",
                 "subscriber_read_full": "Use this when you're building applications that you want GameWisp subscribers to use. Provides access to the subscription endpoint in the User Resource. Allows access to endpoints that return full subscriber information, including user input on benefit data. Don't request this scope from a subscriber unless you absolutely need that information from subscribers. Useful if you want to build applications for GameWisp subscribers and do not necessarily have authorization for a channel to which a subscriber is subscribed.",
                 "user_read": "Use this when you're building applications that require user information: avatars, About Me, etc. Allows access to the information endpoint in the User Resource. Since this scope allows access to basic user information, it's usually good practice to request this scope along with whatever others you may need."
-            }
+            },
+            "separator": ","
         }
     },
     "href": {
