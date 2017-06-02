@@ -1,7 +1,7 @@
 var me = {
     fetch: [
         function() {
-            return 'https://api.gamewisp.com/pub/v1/channel/information';
+            return 'https://api.gamewisp.com/pub/v1/user/information';
         }
     ],
     params: {},
