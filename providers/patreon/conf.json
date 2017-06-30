@@ -50,7 +50,8 @@
             "values": {
                 "users": "User profile information",
                 "pledges-to-me": "Pledges to your creator",
-                "my-campaign": "Creator info"
+                "my-campaign": "Creator info",
+                "campaigns": "Multi-campaign capabilities (requires special access)"
             }
         }
     },
